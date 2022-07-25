@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card my-4">
+        <div class="card-header">Sign Up</div>
+
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" required [(ngModel)]="email">
+
+                </div>
+                <div class="form-group">
+                    <label for="pass">Senha:</label>
+                    <input for="password" class="form-control" name="pass" id="pass" required [(ngModel)]="pass">
+                    <small *ngIf="">Password required</small>
+                </div>
+
+                <button class="btn btn-sucessful" (click)="entrar()" *ngIf="this.email || this.pass !== undefined" routerLink="/">Entrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <app-footer></app-footer>
+</footer>
+
+</html>
+
+<router-outlet></router-outlet>

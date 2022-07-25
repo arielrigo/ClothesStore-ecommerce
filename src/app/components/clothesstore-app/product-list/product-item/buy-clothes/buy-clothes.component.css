@@ -1,0 +1,85 @@
+.sizes {
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.btn-outline-dark {
+    margin: 4px;
+}
+
+.options {
+    position: relative;
+    top: 70px;
+    width: 40%;
+    margin-left: 25px;
+    border-width: 2px;
+    left: 0px;
+    float: left;
+    background-color: rgb(241, 240, 240);
+}
+
+.frete-text {
+    position: relative;
+    left: 10%;
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+}
+
+.frete-subtext {
+    position: relative;
+    left: 10%;
+    font-size: 13px;
+    color: rgb(133, 132, 132);
+    flex-wrap: wrap;
+}
+
+.categories {
+    margin-top: 20px;
+    width: 40%;
+    margin-left: 25px;
+    display: column;
+    border-width: 2px;
+    float: left;
+}
+
+.bi-truck {
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 10px;
+    display: block
+}
+
+@media only screen and (max-width: 845px) {
+    .bi-truck {
+        display: none;
+    }
+}
+
+.price {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.btn-group {
+    position: relative;
+    top: 30px;
+    width: 40%;
+    margin-left: 25px;
+    border-width: 2px;
+    left: 0px;
+    float: left;
+}
+
+.clothe-img {
+    max-width: 40%;
+    margin-left: 40px;
+    position: relative;
+    border-width: 2px;
+    left: 0px;
+    float: left;
+    height: 100%;
+}

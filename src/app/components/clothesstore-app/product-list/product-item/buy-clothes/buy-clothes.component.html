@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body *ngFor="let roupa of roupas">
+    <img alt="roupa" class="bd-placeholder-img card-img-top clothe-img" width="100%" src='{{"assets/images/" + roupa.img + ".jpg"}}'>
+    <div class="card-shadow-sm categories">
+        <p class="card-text"> {{roupa.name}} </p>
+        <p class="card-text price"> {{roupa.price | currency}} </p>
+        <p class="card-text"> {{roupa.category}} </p>
+        <p class="card-text">Em estoque: {{roupa.quantity}}. </p>
+
+    </div>
+
+    <div class="sizes">
+        <p>Tamanho (Br)</p>
+        <button type="button" class="btn btn-outline-dark" value="XS(PP)" id="1" #ref1 (click)="sizeClicked(ref1.value)">XS(PP)</button>
+        <button type="button" class="btn btn-outline-dark" value="S(P)" id="2" #ref2 (click)="sizeClicked(ref2.value)">S(P)</button>
+        <button type="button" class="btn btn-outline-dark" value="M(M)" id="3" #ref3 (click)="sizeClicked(ref3.value)">M(M)</button>
+        <button type="button" class="btn btn-outline-dark" value="L(G)" id="4" #ref4 (click)="sizeClicked(ref4.value)">L(G)</button>
+
+        <p class="mb-0">Tamanho selecionado: <b>{{ valor }}</b> </p>
+    </div>
+
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-dark">Comprar</button>
+    </div>
+
+    <div class="options">
+        <i class="bi bi-truck">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+              </svg>
+        </i>
+        <p class="frete-text">Frete grátis</p>
+        <p class="frete-subtext">Frete taxa fixa grátis em pedidos acima de R$49,00</p>
+        <p class="frete-text">Devolucões Gratuitas</p>
+        <p class="frete-subtext">Devolva seu produto em até 7 dias sem nenhum custo!</p>
+    </div>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
